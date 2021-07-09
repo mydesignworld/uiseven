@@ -3,7 +3,7 @@
     <p>{{ msg }}</p>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      TEST MODAL IMPLIMETATIONS
+      TEST MODAL IMPLIMETATIONSS
     </button>
 
     <!-- Modal -->
