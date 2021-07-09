@@ -1,0 +1,15 @@
+$primary: #3d0478;
+
+#nav {
+  a {
+    font-weight: bold;
+
+
+    &.router-link-exact-active {
+      color: #ffffff;
+    }
+  }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "@/assets/css/main";
