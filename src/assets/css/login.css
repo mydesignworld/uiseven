@@ -1,0 +1,84 @@
+/* Set a background image by replacing the URL below */
+.wrapper {
+    background: #47048c url('../../assets/images/map-image.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border: 1px solid #3d0478;
+    padding-top: 85px;
+  }
+
+
+  .block-center {
+    margin: auto;
+    max-width: 500px;
+    background: rgba(61, 4, 120, 0.35);
+    border-radius: 18px;
+    padding: 0px 25px 15px 25px;
+    border: 1px solid #6100c5;
+  }
+
+  .loginform input,
+  .loginform textarea {
+    padding: 0.6rem;
+    background: #3d0478;
+    opacity: 0.6;
+    color: #fff;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    border: 1px solid #ffffff;
+  }
+
+  .login .medium-logo {
+    margin: -15px 0px;
+    width: 180px
+  }
+
+  .loginform ::-webkit-input-placeholder {
+    color: #ced4da;
+  }
+  .loginform :-moz-placeholder {
+    font-weight: 700;
+    color: #ced4da;
+  }
+  .loginform ::-moz-placeholder {
+    color: #ced4da;
+  }
+  .loginform :-ms-input-placeholder {
+    color: #ced4da;
+  }
+
+  .btn-onprimary {
+    color: #e3c7ff;
+    background-color: #5600af;
+    border-color: #9732ff;
+  }
+
+  .form-rounded {
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 1rem;
+    border: 1px solid #ffffff;
+  }
+
+@media (min-width: 768px) { 
+  .wrapper {
+    padding-top: 150px;
+  }
+
+  .login .medium-logo {
+    margin: -10px 0px;
+    width: 180px
+  }
+
+  .block-center {
+    padding: 0px 60px 15px 60px;
+  }  
+
+  .loginform input,
+  .loginform textarea {
+    opacity: 0.6;
+  }  
+
+}

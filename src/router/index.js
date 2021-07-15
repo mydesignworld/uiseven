@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { watch } from "vue"
 import Home from '../views/Home.vue'
+import { user, initialised } from "@/components/auth";
 
 const routes = [
   {
@@ -7,27 +9,38 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      auth: true,
       title: 'Dashboard'
     }    
   },
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import('../views/About.vue')
   },
   {
     path: '/routing/:id', //dynamic routing test :id
     name: 'Routing',
     meta: {
-      auth: true,
       title: 'Routings'
     },       
     component: () => import('../views/Routing.vue')
-  } 
+  },
+  {
+    path: '/register',
+    name: 'Register',   
+    component: () => import('../views/Register.vue'),
+    meta: {
+      public: true
+    }
+  },
+  {
+    path: '/login',
+    name: 'Login',   
+    component: () => import('../views/Login.vue'),
+    meta: {
+      public: true
+    }    
+  }  
 ]
 
 
@@ -38,7 +51,8 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  
+  // Remove Bootstrap mobile navigation show 
+  document.querySelector("#navbarCollapse").classList.remove("show");
   // START - Ronnie - Give page proper titles
   console.log(to)
   // Ronnie - TO ENABLE the Additional title like company name, edit .env file in route as well as index.html with process.env.VUE_APP_TITLE
@@ -55,7 +69,36 @@ router.beforeEach((to, from, next) => {
   next()
   // END - Ronnie - Give page proper titles
 
-})
+});
+
+router.beforeEach((to, _, next) => {
+  console.log('Router 01');
+  if (initialised.value) {
+    console.log('Router 02');
+    if (!to.matched.some(record => record.meta.public) && !user.value) {
+      console.log('Router 03 - ' + user.value);
+      return next("/login");
+    }
+    console.log('Router 04');
+    next();
+    console.log('Router 05');
+  } else {
+    watch(
+      () => initialised.value,
+      newVal => {
+        if (newVal) {
+          console.log("03");
+          if (!to.matched.some(record => record.meta.public) && !user.value) {
+            console.log("04");
+            return next("/login");
+          }
+
+          next();
+        }
+      }
+    );
+  }
+});
 
 
 export default router

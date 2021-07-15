@@ -1,3 +1,5 @@
+$enable-negative-margins:     false !default;
+
 $primary: #3d0478;
 
 #nav {
@@ -10,6 +12,7 @@ $primary: #3d0478;
     }
   }
 }
+
 
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "@/assets/css/main";

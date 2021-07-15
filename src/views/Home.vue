@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="holdvue home">
     <img alt="Adhara logo" class="medium-logo" src="../assets/images/logo-adhara-color.png">
     <ModalTest msg="Adhara Vue & Bootstrap starter App"/>
     <div class="mt-2"><p>{{ $route.meta.title }}</p></div>
