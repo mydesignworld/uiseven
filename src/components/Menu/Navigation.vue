@@ -5,10 +5,10 @@
             <div class="list-group list-group-flush">
                 <router-link :to="{ name: 'Home' }" class="list-group-item list-group-item-action list-group-item-light p-3" aria-current="page" href="#!" @click.prevent="toggle">Dashboard</router-link>
                 <router-link :to="{ name: 'About' }" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" @click.prevent="toggle">Getting Started</router-link>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">UI Componenets</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Buttons</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Modals</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Tables</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" @click.prevent="toggle">UI Componenets</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" @click.prevent="toggle">Buttons</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" @click.prevent="toggle">Modals</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" @click.prevent="toggle">Tables</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3 orange" href="#!" @click="signOut">Logout</a>
             </div>
         </div>
