@@ -3,8 +3,8 @@
         <!-- Sidebar-->
         <div class="border-end bg-white" id="sidebar-wrapper" v-if="!$route.meta.hideNavigation">
             <div class="list-group list-group-flush">
-                <router-link :to="{ name: 'Home' }" class="list-group-item list-group-item-action list-group-item-light p-3" aria-current="page" href="#!">Dashboard</router-link>
-                <router-link :to="{ name: 'About' }" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Getting Started</router-link>
+                <router-link :to="{ name: 'Home' }" class="list-group-item list-group-item-action list-group-item-light p-3" aria-current="page" href="#!" @click.prevent="toggle">Dashboard</router-link>
+                <router-link :to="{ name: 'About' }" class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" @click.prevent="toggle">Getting Started</router-link>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">UI Componenets</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Buttons</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Modals</a>

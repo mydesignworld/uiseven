@@ -40,6 +40,8 @@ ul {
 
 /* NAVIGATION - MENU - SIDEBAR */
 
+.navbar {border-bottom: 1px solid #5815b1;}
+
 #wrapper {
   overflow-x: hidden;
 }
@@ -61,6 +63,15 @@ ul {
 
 #sidebar-wrapper .list-group {
   width: 15rem;
+}
+
+
+#sidebar-wrapper .list-group-item-light.list-group-item-action:hover {
+  background-color: #f0f0f0;
+}
+
+#sidebar-wrapper .list-group-item-light.list-group-item-action:focus {
+  background-color: #ffffff;
 }
 
 #sidebar-wrapper .list-group-flush > .list-group-item:last-child {
@@ -95,7 +106,8 @@ nav .logo {
   }  
 
   body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-      margin-left: -15rem;
+      /* TO MAKE IT OWRK ON DESKTOP TOO - BUT IT WILL HAVE A NEGATIVE EFFECT ON MOBILE WITHOUT FURTHER CODING */
+      /* margin-left: -15rem; */
   }
 }
 
