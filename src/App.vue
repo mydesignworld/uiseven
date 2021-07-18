@@ -1,7 +1,7 @@
 <template>
-  <Menu/>
-
-  <router-view />
+  <Navigation>
+    <router-view />
+  </Navigation>
   <!--
   <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
@@ -12,11 +12,11 @@
 </template>
 
 <script>
-  import Menu from '@/components/Menu.vue'
+  import Navigation from '@/components/Menu/Navigation.vue'
   export default {
     name: 'App',
     components: {
-      Menu
+      Navigation
     }
   }  
 </script>

@@ -30,7 +30,8 @@ const routes = [
     name: 'Register',   
     component: () => import('../views/Register.vue'),
     meta: {
-      public: true
+      public: true,
+      hideNavigation: true
     }
   },
   {
@@ -38,7 +39,8 @@ const routes = [
     name: 'Login',   
     component: () => import('../views/Login.vue'),
     meta: {
-      public: true
+      public: true,
+      hideNavigation: true
     }    
   }  
 ]
@@ -52,7 +54,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   // Remove Bootstrap mobile navigation show 
-  document.querySelector("#navbarCollapse").classList.remove("show");
+  // document.querySelector("#navbarCollapse").classList.remove("show");
   // START - Ronnie - Give page proper titles
   console.log(to)
   // Ronnie - TO ENABLE the Additional title like company name, edit .env file in route as well as index.html with process.env.VUE_APP_TITLE
